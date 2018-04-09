@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=11" />  @*Edge mode tells Internet Explorer to display content in the IE11 mode.  Use IE=edge to display highest mode available*@
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top marginBottom-0" role="navigation" s>
+        @*<div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            @Html.ActionLink("Closing", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+        </div>*@
+
+        <div class="collapse navbar-collapse" id="navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                @*<li class="active"><a href="#">Active Link</a></li>
+                    <li><a href="#">Link</a></li>*@
+
+                @*<li>@Html.ActionLink("Unspecified 22a, 22b, 22g, 22h)", "Index", "Recaps", new { recapType = 1 }, null)</li>
+                    <li class="dropdown dropdown-submenu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown Link 4</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Dropdown Submenu Link 4.1</a></li>
+                            <li><a href="#">Dropdown Submenu Link 4.2</a></li>
+                            <li><a href="#">Dropdown Submenu Link 4.3</a></li>
+                            <li><a href="#">Dropdown Submenu Link 4.4</a></li>
+                        </ul>
+                    </li>*@
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </nav>
+
+    <div class="body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            @*<p>@DateTime.Now.Year - Closing</p>*@
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

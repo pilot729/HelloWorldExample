@@ -1,0 +1,634 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://services.nicornational.com" elementFormDefault="qualified" targetNamespace="http://services.nicornational.com" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://dev.istore.nicorservices.com/CiboodleServices/CustomerService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" />
+  <xs:element name="GetServiceCall">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="context" nillable="true" type="q1:Context" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="request" nillable="true" type="q2:GetServiceCall_Request" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetServiceCallResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="GetServiceCallResult" nillable="true" type="q3:GetServiceCall_Response" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LogESSEvent">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="context" nillable="true" type="q4:Context" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="request" nillable="true" type="q5:LogESSEvent_Request" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LogESSEventResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="LogESSEventResult" nillable="true" type="q6:LogESSEvent_Response" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ResendClaimNotification">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="context" nillable="true" type="q7:Context" />
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="request" nillable="true" type="q8:ResendClaimNotification_Request" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ResendClaimNotificationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="ResendClaimNotificationResult" nillable="true" type="q9:ResendClaimNotification_Response" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ResendBill">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="context" nillable="true" type="q10:Context" />
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="request" nillable="true" type="q11:ResendBill_Request" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ResendBillResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="ResendBillResult" nillable="true" type="q12:ResendBill_Response" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchDominionProspects">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="context" nillable="true" type="q13:Context" />
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="request" nillable="true" type="q14:SearchDominionProspects_Request" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchDominionProspectsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="SearchDominionProspectsResult" nillable="true" type="q15:SearchDominionProspects_Response" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchNicorGasCIRTool">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="context" nillable="true" type="q16:Context" />
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="request" nillable="true" type="q17:SearchNicorGasCIRTool_Request" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchNicorGasCIRToolResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="SearchNicorGasCIRToolResult" nillable="true" type="q18:SearchNicorGasCIRTool_Response" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchNicorGasPIRTool">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="context" nillable="true" type="q19:Context" />
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="request" nillable="true" type="q20:SearchNicorGasPIRTool_Request" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchNicorGasPIRToolResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="SearchNicorGasPIRToolResult" nillable="true" type="q21:SearchNicorGasPIRTool_Response" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendAllConnectDataPacket">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="context" nillable="true" type="q22:Context" />
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="request" nillable="true" type="q23:SendAllConnectDataPacket_Request" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendAllConnectDataPacketResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="SendAllConnectDataPacketResult" nillable="true" type="q24:SendAllConnectDataPacket_Response" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendReimbursementRequestForm">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="context" nillable="true" type="q25:Context" />
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="request" nillable="true" type="q26:SendReimbursementRequestForm_Request" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendReimbursementRequestFormResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="SendReimbursementRequestFormResult" nillable="true" type="q27:SendReimbursementRequestForm_Response" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendTermsAndConditions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="context" nillable="true" type="q28:Context" />
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="request" nillable="true" type="q29:SendTermsAndConditions_Request" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendTermsAndConditionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="SendTermsAndConditionsResult" nillable="true" type="q30:SendTermsAndConditions_Response" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SubmitGasService">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="context" nillable="true" type="q31:Context" />
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="request" nillable="true" type="q32:SubmitGasService_Request" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SubmitGasServiceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="SubmitGasServiceResult" nillable="true" type="q33:SubmitGasService_Response" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateEMail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="context" nillable="true" type="q34:Context" />
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="request" nillable="true" type="q35:ValidateEMail_Request" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateEMailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="ValidateEMailResult" nillable="true" type="q36:ValidateEMail_Response" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateUtilityNumber">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="context" nillable="true" type="q37:Context" />
+        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="request" nillable="true" type="q38:ValidateUtilityNumber_Request" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateUtilityNumberResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="ValidateUtilityNumberResult" nillable="true" type="q39:ValidateUtilityNumber_Response" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateVectrenLDCNumber">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="context" nillable="true" type="q40:Context" />
+        <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="request" nillable="true" type="q41:ValidateVectrenLDCNumber_Request" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateVectrenLDCNumberResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q42="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="ValidateVectrenLDCNumberResult" nillable="true" type="q42:ValidateVectrenLDCNumber_Response" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateAddress">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q43="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="context" nillable="true" type="q43:Context" />
+        <xs:element xmlns:q44="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="request" nillable="true" type="q44:CreateAddress_Request" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateAddressResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q45="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="CreateAddressResult" nillable="true" type="q45:CreateAddress_Response" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateContact">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q46="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="context" nillable="true" type="q46:Context" />
+        <xs:element xmlns:q47="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="request" nillable="true" type="q47:CreateContact_Request" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateContactResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q48="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="CreateContactResult" nillable="true" type="q48:CreateContact_Response" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateContactPoint">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q49="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="context" nillable="true" type="q49:Context" />
+        <xs:element xmlns:q50="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="request" nillable="true" type="q50:CreateContactPoint_Request" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateContactPointResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q51="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="CreateContactPointResult" nillable="true" type="q51:CreateContactPoint_Response" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateCredit">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q52="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="context" nillable="true" type="q52:Context" />
+        <xs:element xmlns:q53="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="request" nillable="true" type="q53:CreateCredit_Request" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateCreditResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q54="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="CreateCreditResult" nillable="true" type="q54:CreateCredit_Response" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateParty">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q55="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="context" nillable="true" type="q55:Context" />
+        <xs:element xmlns:q56="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="request" nillable="true" type="q56:CreateParty_Request" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreatePartyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q57="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="CreatePartyResult" nillable="true" type="q57:CreateParty_Response" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateSalesLead">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q58="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="context" nillable="true" type="q58:Context" />
+        <xs:element xmlns:q59="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="request" nillable="true" type="q59:CreateSalesLead_Request" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateSalesLeadResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q60="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="CreateSalesLeadResult" nillable="true" type="q60:CreateSalesLead_Response" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreditCheck">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q61="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="context" nillable="true" type="q61:Context" />
+        <xs:element xmlns:q62="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="request" nillable="true" type="q62:CreditCheck_Request" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreditCheckResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q63="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="CreditCheckResult" nillable="true" type="q63:CreditCheck_Response" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CustomerSearch">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q64="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="context" nillable="true" type="q64:Context" />
+        <xs:element xmlns:q65="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="request" nillable="true" type="q65:CustomerSearch_Request" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CustomerSearchResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q66="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="CustomerSearchResult" nillable="true" type="q66:CustomerSearch_Response" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditAddress">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q67="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="context" nillable="true" type="q67:Context" />
+        <xs:element xmlns:q68="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="request" nillable="true" type="q68:EditAddress_Request" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditAddressResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q69="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="EditAddressResult" nillable="true" type="q69:EditAddress_Response" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditContact">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q70="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="context" nillable="true" type="q70:Context" />
+        <xs:element xmlns:q71="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="request" nillable="true" type="q71:EditContact_Request" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditContactResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q72="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="EditContactResult" nillable="true" type="q72:EditContact_Response" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditContactPoint">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q73="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="context" nillable="true" type="q73:Context" />
+        <xs:element xmlns:q74="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="request" nillable="true" type="q74:EditContactPoint_Request" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditContactPointResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q75="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="EditContactPointResult" nillable="true" type="q75:EditContactPoint_Response" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditParty">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q76="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="context" nillable="true" type="q76:Context" />
+        <xs:element xmlns:q77="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="request" nillable="true" type="q77:EditParty_Request" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditPartyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q78="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="EditPartyResult" nillable="true" type="q78:EditParty_Response" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EnrollElectric">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q79="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="context" nillable="true" type="q79:Context" />
+        <xs:element xmlns:q80="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="request" nillable="true" type="q80:EnrollElectric_Request" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EnrollElectricResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q81="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="EnrollElectricResult" nillable="true" type="q81:EnrollElectric_Response" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAvailableUtilityCodes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q82="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="context" nillable="true" type="q82:Context" />
+        <xs:element xmlns:q83="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="request" nillable="true" type="q83:GetAvailableUtilityCodes_Request" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAvailableUtilityCodesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q84="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="GetAvailableUtilityCodesResult" nillable="true" type="q84:GetAvailableUtilityCodes_Response" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetClaimAssignmentHistory">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q85="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="context" nillable="true" type="q85:Context" />
+        <xs:element xmlns:q86="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="request" nillable="true" type="q86:GetClaimAssignmentHistory_Request" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetClaimAssignmentHistoryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q87="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="GetClaimAssignmentHistoryResult" nillable="true" type="q87:GetClaimAssignmentHistory_Response" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetClaimNotificationHistory">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q88="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="context" nillable="true" type="q88:Context" />
+        <xs:element xmlns:q89="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="request" nillable="true" type="q89:GetClaimNotificationHistory_Request" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetClaimNotificationHistoryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q90="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="GetClaimNotificationHistoryResult" nillable="true" type="q90:GetClaimNotificationHistory_Response" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCloseClaimReasonCodes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q91="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="context" nillable="true" type="q91:Context" />
+        <xs:element xmlns:q92="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="request" nillable="true" type="q92:GetCloseClaimReasonCodes_Request" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCloseClaimReasonCodesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q93="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="GetCloseClaimReasonCodesResult" nillable="true" type="q93:GetCloseClaimReasonCodes_Response" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCoverageUsedToDate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q94="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="context" nillable="true" type="q94:Context" />
+        <xs:element xmlns:q95="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="request" nillable="true" type="q95:GetCoverageUsedToDate_Request" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCoverageUsedToDateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q96="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="GetCoverageUsedToDateResult" nillable="true" type="q96:GetCoverageUsedToDate_Response" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomerBalances">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q97="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="context" nillable="true" type="q97:Context" />
+        <xs:element xmlns:q98="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="request" nillable="true" type="q98:GetCustomerBalances_Request" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomerBalancesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q99="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="GetCustomerBalancesResult" nillable="true" type="q99:GetCustomerBalances_Response" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomerBillingHistory">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q100="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="context" nillable="true" type="q100:Context" />
+        <xs:element xmlns:q101="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="request" nillable="true" type="q101:GetCustomerBillingHistory_Request" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomerBillingHistoryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q102="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="GetCustomerBillingHistoryResult" nillable="true" type="q102:GetCustomerBillingHistory_Response" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomerClaims">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q103="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="context" nillable="true" type="q103:Context" />
+        <xs:element xmlns:q104="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="request" nillable="true" type="q104:GetCustomerClaims_Request" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomerClaimsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q105="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="GetCustomerClaimsResult" nillable="true" type="q105:GetCustomerClaims_Response" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomerContracts">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q106="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="context" nillable="true" type="q106:Context" />
+        <xs:element xmlns:q107="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="request" nillable="true" type="q107:GetCustomerContracts_Request" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomerContractsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q108="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="GetCustomerContractsResult" nillable="true" type="q108:GetCustomerContracts_Response" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomerOrders">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q109="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="context" nillable="true" type="q109:Context" />
+        <xs:element xmlns:q110="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="request" nillable="true" type="q110:GetCustomerOrders_Request" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomerOrdersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q111="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="GetCustomerOrdersResult" nillable="true" type="q111:GetCustomerOrders_Response" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomerPremise">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q112="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="context" nillable="true" type="q112:Context" />
+        <xs:element xmlns:q113="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="request" nillable="true" type="q113:GetCustomerPremise_Request" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomerPremiseResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q114="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="GetCustomerPremiseResult" nillable="true" type="q114:GetCustomerPremise_Response" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomerProfile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q115="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="context" nillable="true" type="q115:Context" />
+        <xs:element xmlns:q116="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="request" nillable="true" type="q116:GetCustomerProfile_Request" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomerProfileResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q117="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="GetCustomerProfileResult" nillable="true" type="q117:GetCustomerProfile_Response" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetReimbursementInputs">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q118="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="context" nillable="true" type="q118:Context" />
+        <xs:element xmlns:q119="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="request" nillable="true" type="q119:GetReimbursementInputs_Request" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetReimbursementInputsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q120="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="GetReimbursementInputsResult" nillable="true" type="q120:GetReimbursementInputs_Response" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetServiceCalls">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q121="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="context" nillable="true" type="q121:Context" />
+        <xs:element xmlns:q122="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="request" nillable="true" type="q122:GetServiceCalls_Request" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetServiceCallsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q123="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="GetServiceCallsResult" nillable="true" type="q123:GetServiceCalls_Response" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetServiceRequests">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q124="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="context" nillable="true" type="q124:Context" />
+        <xs:element xmlns:q125="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="request" nillable="true" type="q125:GetServiceRequests_Request" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetServiceRequestsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q126="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" minOccurs="0" name="GetServiceRequestsResult" nillable="true" type="q126:GetServiceRequests_Response" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

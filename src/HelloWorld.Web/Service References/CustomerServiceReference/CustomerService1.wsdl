@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://services.nicornational.com" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://services.nicornational.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://services.nicornational.com/Imports">
+      <xsd:import schemaLocation="http://dev.istore.nicorservices.com/CiboodleServices/CustomerService.svc?xsd=xsd0" namespace="http://services.nicornational.com" />
+      <xsd:import schemaLocation="http://dev.istore.nicorservices.com/CiboodleServices/CustomerService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://dev.istore.nicorservices.com/CiboodleServices/CustomerService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/NicorNational.Services.Ciboodle" />
+      <xsd:import schemaLocation="http://dev.istore.nicorservices.com/CiboodleServices/CustomerService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ICustomerService_GetServiceCall_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetServiceCall" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerService_GetServiceCall_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetServiceCallResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerService_LogESSEvent_InputMessage">
+    <wsdl:part name="parameters" element="tns:LogESSEvent" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerService_LogESSEvent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LogESSEventResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerService_ResendClaimNotification_InputMessage">
+    <wsdl:part name="parameters" element="tns:ResendClaimNotification" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerService_ResendClaimNotification_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ResendClaimNotificationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerService_ResendBill_InputMessage">
+    <wsdl:part name="parameters" element="tns:ResendBill" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerService_ResendBill_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ResendBillResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerService_SearchDominionProspects_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchDominionProspects" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerService_SearchDominionProspects_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchDominionProspectsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerService_SearchNicorGasCIRTool_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchNicorGasCIRTool" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerService_SearchNicorGasCIRTool_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchNicorGasCIRToolResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerService_SearchNicorGasPIRTool_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchNicorGasPIRTool" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerService_SearchNicorGasPIRTool_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchNicorGasPIRToolResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerService_SendAllConnectDataPacket_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendAllConnectDataPacket" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerService_SendAllConnectDataPacket_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendAllConnectDataPacketResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerService_SendReimbursementRequestForm_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendReimbursementRequestForm" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerService_SendReimbursementRequestForm_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendReimbursementRequestFormResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerService_SendTermsAndConditions_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendTermsAndConditions" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerService_SendTermsAndConditions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendTermsAndConditionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerService_SubmitGasService_InputMessage">
+    <wsdl:part name="parameters" element="tns:SubmitGasService" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerService_SubmitGasService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SubmitGasServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerService_ValidateEMail_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateEMail" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerService_ValidateEMail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateEMailResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerService_ValidateUtilityNumber_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateUtilityNumber" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerService_ValidateUtilityNumber_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateUtilityNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerService_ValidateVectrenLDCNumber_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateVectrenLDCNumber" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerService_ValidateVectrenLDCNumber_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateVectrenLDCNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerService_CreateAddress_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateAddress" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerService_CreateAddress_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateAddressResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerService_CreateContact_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateContact" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerService_CreateContact_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateContactResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerService_CreateContactPoint_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateContactPoint" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerService_CreateContactPoint_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateContactPointResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerService_CreateCredit_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateCredit" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerService_CreateCredit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateCreditResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerService_CreateParty_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateParty" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerService_CreateParty_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreatePartyResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerService_CreateSalesLead_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateSalesLead" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerService_CreateSalesLead_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateSalesLeadResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerService_CreditCheck_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreditCheck" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerService_CreditCheck_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreditCheckResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerService_CustomerSearch_InputMessage">
+    <wsdl:part name="parameters" element="tns:CustomerSearch" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerService_CustomerSearch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CustomerSearchResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerService_EditAddress_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditAddress" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerService_EditAddress_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditAddressResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerService_EditContact_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditContact" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerService_EditContact_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditContactResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerService_EditContactPoint_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditContactPoint" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerService_EditContactPoint_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditContactPointResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerService_EditParty_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditParty" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerService_EditParty_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditPartyResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerService_EnrollElectric_InputMessage">
+    <wsdl:part name="parameters" element="tns:EnrollElectric" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerService_EnrollElectric_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EnrollElectricResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerService_GetAvailableUtilityCodes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAvailableUtilityCodes" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerService_GetAvailableUtilityCodes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAvailableUtilityCodesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerService_GetClaimAssignmentHistory_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetClaimAssignmentHistory" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerService_GetClaimAssignmentHistory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetClaimAssignmentHistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerService_GetClaimNotificationHistory_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetClaimNotificationHistory" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerService_GetClaimNotificationHistory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetClaimNotificationHistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerService_GetCloseClaimReasonCodes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCloseClaimReasonCodes" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerService_GetCloseClaimReasonCodes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCloseClaimReasonCodesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerService_GetCoverageUsedToDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCoverageUsedToDate" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerService_GetCoverageUsedToDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCoverageUsedToDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerService_GetCustomerBalances_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerBalances" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerService_GetCustomerBalances_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerBalancesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerService_GetCustomerBillingHistory_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerBillingHistory" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerService_GetCustomerBillingHistory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerBillingHistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerService_GetCustomerClaims_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerClaims" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerService_GetCustomerClaims_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerClaimsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerService_GetCustomerContracts_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerContracts" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerService_GetCustomerContracts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerContractsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerService_GetCustomerOrders_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerOrders" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerService_GetCustomerOrders_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerOrdersResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerService_GetCustomerPremise_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerPremise" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerService_GetCustomerPremise_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerPremiseResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerService_GetCustomerProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerProfile" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerService_GetCustomerProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerService_GetReimbursementInputs_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetReimbursementInputs" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerService_GetReimbursementInputs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetReimbursementInputsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerService_GetServiceCalls_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetServiceCalls" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerService_GetServiceCalls_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetServiceCallsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerService_GetServiceRequests_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetServiceRequests" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerService_GetServiceRequests_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetServiceRequestsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ICustomerService">
+    <wsdl:operation name="GetServiceCall">
+      <wsdl:input wsaw:Action="http://services.nicornational.com/ICustomerService/GetServiceCall" message="tns:ICustomerService_GetServiceCall_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.nicornational.com/ICustomerService/GetServiceCallResponse" message="tns:ICustomerService_GetServiceCall_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LogESSEvent">
+      <wsdl:input wsaw:Action="http://services.nicornational.com/ICustomerService/LogESSEvent" message="tns:ICustomerService_LogESSEvent_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.nicornational.com/ICustomerService/LogESSEventResponse" message="tns:ICustomerService_LogESSEvent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ResendClaimNotification">
+      <wsdl:input wsaw:Action="http://services.nicornational.com/ICustomerService/ResendClaimNotification" message="tns:ICustomerService_ResendClaimNotification_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.nicornational.com/ICustomerService/ResendClaimNotificationResponse" message="tns:ICustomerService_ResendClaimNotification_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ResendBill">
+      <wsdl:input wsaw:Action="http://services.nicornational.com/ICustomerService/ResendBill" message="tns:ICustomerService_ResendBill_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.nicornational.com/ICustomerService/ResendBillResponse" message="tns:ICustomerService_ResendBill_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchDominionProspects">
+      <wsdl:input wsaw:Action="http://services.nicornational.com/ICustomerService/SearchDominionProspects" message="tns:ICustomerService_SearchDominionProspects_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.nicornational.com/ICustomerService/SearchDominionProspectsResponse" message="tns:ICustomerService_SearchDominionProspects_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchNicorGasCIRTool">
+      <wsdl:input wsaw:Action="http://services.nicornational.com/ICustomerService/SearchNicorGasCIRTool" message="tns:ICustomerService_SearchNicorGasCIRTool_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.nicornational.com/ICustomerService/SearchNicorGasCIRToolResponse" message="tns:ICustomerService_SearchNicorGasCIRTool_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchNicorGasPIRTool">
+      <wsdl:input wsaw:Action="http://services.nicornational.com/ICustomerService/SearchNicorGasPIRTool" message="tns:ICustomerService_SearchNicorGasPIRTool_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.nicornational.com/ICustomerService/SearchNicorGasPIRToolResponse" message="tns:ICustomerService_SearchNicorGasPIRTool_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendAllConnectDataPacket">
+      <wsdl:input wsaw:Action="http://services.nicornational.com/ICustomerService/SendAllConnectDataPacket" message="tns:ICustomerService_SendAllConnectDataPacket_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.nicornational.com/ICustomerService/SendAllConnectDataPacketResponse" message="tns:ICustomerService_SendAllConnectDataPacket_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendReimbursementRequestForm">
+      <wsdl:input wsaw:Action="http://services.nicornational.com/ICustomerService/SendReimbursementRequestForm" message="tns:ICustomerService_SendReimbursementRequestForm_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.nicornational.com/ICustomerService/SendReimbursementRequestFormResponse" message="tns:ICustomerService_SendReimbursementRequestForm_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendTermsAndConditions">
+      <wsdl:input wsaw:Action="http://services.nicornational.com/ICustomerService/SendTermsAndConditions" message="tns:ICustomerService_SendTermsAndConditions_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.nicornational.com/ICustomerService/SendTermsAndConditionsResponse" message="tns:ICustomerService_SendTermsAndConditions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SubmitGasService">
+      <wsdl:input wsaw:Action="http://services.nicornational.com/ICustomerService/SubmitGasService" message="tns:ICustomerService_SubmitGasService_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.nicornational.com/ICustomerService/SubmitGasServiceResponse" message="tns:ICustomerService_SubmitGasService_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateEMail">
+      <wsdl:input wsaw:Action="http://services.nicornational.com/ICustomerService/ValidateEMail" message="tns:ICustomerService_ValidateEMail_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.nicornational.com/ICustomerService/ValidateEMailResponse" message="tns:ICustomerService_ValidateEMail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateUtilityNumber">
+      <wsdl:input wsaw:Action="http://services.nicornational.com/ICustomerService/ValidateUtilityNumber" message="tns:ICustomerService_ValidateUtilityNumber_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.nicornational.com/ICustomerService/ValidateUtilityNumberResponse" message="tns:ICustomerService_ValidateUtilityNumber_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateVectrenLDCNumber">
+      <wsdl:input wsaw:Action="http://services.nicornational.com/ICustomerService/ValidateVectrenLDCNumber" message="tns:ICustomerService_ValidateVectrenLDCNumber_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.nicornational.com/ICustomerService/ValidateVectrenLDCNumberResponse" message="tns:ICustomerService_ValidateVectrenLDCNumber_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateAddress">
+      <wsdl:input wsaw:Action="http://services.nicornational.com/ICustomerService/CreateAddress" message="tns:ICustomerService_CreateAddress_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.nicornational.com/ICustomerService/CreateAddressResponse" message="tns:ICustomerService_CreateAddress_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateContact">
+      <wsdl:input wsaw:Action="http://services.nicornational.com/ICustomerService/CreateContact" message="tns:ICustomerService_CreateContact_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.nicornational.com/ICustomerService/CreateContactResponse" message="tns:ICustomerService_CreateContact_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateContactPoint">
+      <wsdl:input wsaw:Action="http://services.nicornational.com/ICustomerService/CreateContactPoint" message="tns:ICustomerService_CreateContactPoint_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.nicornational.com/ICustomerService/CreateContactPointResponse" message="tns:ICustomerService_CreateContactPoint_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateCredit">
+      <wsdl:input wsaw:Action="http://services.nicornational.com/ICustomerService/CreateCredit" message="tns:ICustomerService_CreateCredit_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.nicornational.com/ICustomerService/CreateCreditResponse" message="tns:ICustomerService_CreateCredit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateParty">
+      <wsdl:input wsaw:Action="http://services.nicornational.com/ICustomerService/CreateParty" message="tns:ICustomerService_CreateParty_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.nicornational.com/ICustomerService/CreatePartyResponse" message="tns:ICustomerService_CreateParty_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateSalesLead">
+      <wsdl:input wsaw:Action="http://services.nicornational.com/ICustomerService/CreateSalesLead" message="tns:ICustomerService_CreateSalesLead_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.nicornational.com/ICustomerService/CreateSalesLeadResponse" message="tns:ICustomerService_CreateSalesLead_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreditCheck">
+      <wsdl:input wsaw:Action="http://services.nicornational.com/ICustomerService/CreditCheck" message="tns:ICustomerService_CreditCheck_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.nicornational.com/ICustomerService/CreditCheckResponse" message="tns:ICustomerService_CreditCheck_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CustomerSearch">
+      <wsdl:input wsaw:Action="http://services.nicornational.com/ICustomerService/CustomerSearch" message="tns:ICustomerService_CustomerSearch_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.nicornational.com/ICustomerService/CustomerSearchResponse" message="tns:ICustomerService_CustomerSearch_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditAddress">
+      <wsdl:input wsaw:Action="http://services.nicornational.com/ICustomerService/EditAddress" message="tns:ICustomerService_EditAddress_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.nicornational.com/ICustomerService/EditAddressResponse" message="tns:ICustomerService_EditAddress_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditContact">
+      <wsdl:input wsaw:Action="http://services.nicornational.com/ICustomerService/EditContact" message="tns:ICustomerService_EditContact_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.nicornational.com/ICustomerService/EditContactResponse" message="tns:ICustomerService_EditContact_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditContactPoint">
+      <wsdl:input wsaw:Action="http://services.nicornational.com/ICustomerService/EditContactPoint" message="tns:ICustomerService_EditContactPoint_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.nicornational.com/ICustomerService/EditContactPointResponse" message="tns:ICustomerService_EditContactPoint_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditParty">
+      <wsdl:input wsaw:Action="http://services.nicornational.com/ICustomerService/EditParty" message="tns:ICustomerService_EditParty_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.nicornational.com/ICustomerService/EditPartyResponse" message="tns:ICustomerService_EditParty_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EnrollElectric">
+      <wsdl:input wsaw:Action="http://services.nicornational.com/ICustomerService/EnrollElectric" message="tns:ICustomerService_EnrollElectric_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.nicornational.com/ICustomerService/EnrollElectricResponse" message="tns:ICustomerService_EnrollElectric_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAvailableUtilityCodes">
+      <wsdl:input wsaw:Action="http://services.nicornational.com/ICustomerService/GetAvailableUtilityCodes" message="tns:ICustomerService_GetAvailableUtilityCodes_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.nicornational.com/ICustomerService/GetAvailableUtilityCodesResponse" message="tns:ICustomerService_GetAvailableUtilityCodes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetClaimAssignmentHistory">
+      <wsdl:input wsaw:Action="http://services.nicornational.com/ICustomerService/GetClaimAssignmentHistory" message="tns:ICustomerService_GetClaimAssignmentHistory_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.nicornational.com/ICustomerService/GetClaimAssignmentHistoryResponse" message="tns:ICustomerService_GetClaimAssignmentHistory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetClaimNotificationHistory">
+      <wsdl:input wsaw:Action="http://services.nicornational.com/ICustomerService/GetClaimNotificationHistory" message="tns:ICustomerService_GetClaimNotificationHistory_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.nicornational.com/ICustomerService/GetClaimNotificationHistoryResponse" message="tns:ICustomerService_GetClaimNotificationHistory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCloseClaimReasonCodes">
+      <wsdl:input wsaw:Action="http://services.nicornational.com/ICustomerService/GetCloseClaimReasonCodes" message="tns:ICustomerService_GetCloseClaimReasonCodes_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.nicornational.com/ICustomerService/GetCloseClaimReasonCodesResponse" message="tns:ICustomerService_GetCloseClaimReasonCodes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCoverageUsedToDate">
+      <wsdl:input wsaw:Action="http://services.nicornational.com/ICustomerService/GetCoverageUsedToDate" message="tns:ICustomerService_GetCoverageUsedToDate_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.nicornational.com/ICustomerService/GetCoverageUsedToDateResponse" message="tns:ICustomerService_GetCoverageUsedToDate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerBalances">
+      <wsdl:input wsaw:Action="http://services.nicornational.com/ICustomerService/GetCustomerBalances" message="tns:ICustomerService_GetCustomerBalances_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.nicornational.com/ICustomerService/GetCustomerBalancesResponse" message="tns:ICustomerService_GetCustomerBalances_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerBillingHistory">
+      <wsdl:input wsaw:Action="http://services.nicornational.com/ICustomerService/GetCustomerBillingHistory" message="tns:ICustomerService_GetCustomerBillingHistory_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.nicornational.com/ICustomerService/GetCustomerBillingHistoryResponse" message="tns:ICustomerService_GetCustomerBillingHistory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerClaims">
+      <wsdl:input wsaw:Action="http://services.nicornational.com/ICustomerService/GetCustomerClaims" message="tns:ICustomerService_GetCustomerClaims_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.nicornational.com/ICustomerService/GetCustomerClaimsResponse" message="tns:ICustomerService_GetCustomerClaims_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerContracts">
+      <wsdl:input wsaw:Action="http://services.nicornational.com/ICustomerService/GetCustomerContracts" message="tns:ICustomerService_GetCustomerContracts_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.nicornational.com/ICustomerService/GetCustomerContractsResponse" message="tns:ICustomerService_GetCustomerContracts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerOrders">
+      <wsdl:input wsaw:Action="http://services.nicornational.com/ICustomerService/GetCustomerOrders" message="tns:ICustomerService_GetCustomerOrders_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.nicornational.com/ICustomerService/GetCustomerOrdersResponse" message="tns:ICustomerService_GetCustomerOrders_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerPremise">
+      <wsdl:input wsaw:Action="http://services.nicornational.com/ICustomerService/GetCustomerPremise" message="tns:ICustomerService_GetCustomerPremise_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.nicornational.com/ICustomerService/GetCustomerPremiseResponse" message="tns:ICustomerService_GetCustomerPremise_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerProfile">
+      <wsdl:input wsaw:Action="http://services.nicornational.com/ICustomerService/GetCustomerProfile" message="tns:ICustomerService_GetCustomerProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.nicornational.com/ICustomerService/GetCustomerProfileResponse" message="tns:ICustomerService_GetCustomerProfile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReimbursementInputs">
+      <wsdl:input wsaw:Action="http://services.nicornational.com/ICustomerService/GetReimbursementInputs" message="tns:ICustomerService_GetReimbursementInputs_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.nicornational.com/ICustomerService/GetReimbursementInputsResponse" message="tns:ICustomerService_GetReimbursementInputs_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceCalls">
+      <wsdl:input wsaw:Action="http://services.nicornational.com/ICustomerService/GetServiceCalls" message="tns:ICustomerService_GetServiceCalls_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.nicornational.com/ICustomerService/GetServiceCallsResponse" message="tns:ICustomerService_GetServiceCalls_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceRequests">
+      <wsdl:input wsaw:Action="http://services.nicornational.com/ICustomerService/GetServiceRequests" message="tns:ICustomerService_GetServiceRequests_InputMessage" />
+      <wsdl:output wsaw:Action="http://services.nicornational.com/ICustomerService/GetServiceRequestsResponse" message="tns:ICustomerService_GetServiceRequests_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>
