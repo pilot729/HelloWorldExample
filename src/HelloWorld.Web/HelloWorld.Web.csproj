@@ -208,9 +208,6 @@
     <Content Include="Default.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="images\ajax-loader.gif" />
-    <Content Include="ImportFiles\DefaultItemToPublishFolder.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Compile Include="Controllers\HelloWorldController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Models\MenuItemsModel.cs" />

@@ -12,7 +12,7 @@ namespace HelloWorld.Business
     [Serializable]
     public class HelloWorldRepository : IHelloWorldRepository
     {
-        IDataLayer _dal;
+        private IDataLayer _dal;
 
         public HelloWorldRepository(IDataLayer dal)
         {
